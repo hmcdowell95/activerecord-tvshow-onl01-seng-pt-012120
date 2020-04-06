@@ -23,6 +23,10 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    self.connection.select_all("SELECT * FROM shows WHERE rating > 5")
+    self.connection.select_all("SELECT * FROM shows WHERE rating > 5").to_a
+  end
+  
+  def self.shows_by_alphabetical_order
+    
   end
 end 
