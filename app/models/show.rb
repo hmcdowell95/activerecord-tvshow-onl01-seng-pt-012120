@@ -23,6 +23,6 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    self.connection.select_all("SELECT * FROM ")
+    self.connection.select_all("SELECT * FROM shows WHERE rating > 5")
   end
 end 
