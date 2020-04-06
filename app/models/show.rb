@@ -23,6 +23,6 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    self.connection.select_all
+    self.connection.select_all("")
   end
 end 
